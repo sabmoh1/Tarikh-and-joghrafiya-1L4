@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;700&display=swap');
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ✅ تصميم الحاوية الرئيسية */
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ✅ تحسين عرض الحاوية الخاصة بالجدول */
+.small-container {
+    width: 95%;
+    max-width: 800px;
+    height: 90vh;
+    overflow: auto;
+}
+
+/* ✅ تحسين عرض الجدول داخل حاوية قابلة للتمرير */
+.table-wrapper {
+    overflow-x: auto;
+    max-height: 70vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ تحسين تصميم الجدول */
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    color: black;
+}
+
+.events-table th, .events-table td {
+    padding: 10px;
+    border: 2px solid #1e3c72;
+    text-align: center;
+}
+
+.events-table th {
+    background: #2a5298;
+    color: white;
+    font-size: 16px;
+}
+
+.events-table tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+.events-table tr:hover {
+    background: #ddd;
+    transition: 0.3s ease-in-out;
+}
+
+/* ✅ تصميم العنوان */
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    animation: slideInDown 1.5s ease-in-out;
+}
+
+/* ✅ تنسيق الأزرار */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-btn, .back-btn {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    box-shadow: 0px 8px 15px rgba(255, 126, 95, 0.3);
+}
+
+.main-btn:hover, .back-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 12px 25px rgba(255, 126, 95, 0.4);
+}
+
+/* ✅ زر الرجوع */
+.back-btn {
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(90deg, #ff5e62, #ff9966);
+}
+
+/* ✅ أنيميشن */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ تحسين تجربة المستخدم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .small-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .events-table th, .events-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .main-btn, .back-btn {
+        width: 90%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
